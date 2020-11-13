@@ -12,10 +12,10 @@ class Bootstrap {
 	 * @return string the version number
 	 */
 	public static function getVersion() {
-		$config = file_get_contents(__DIR__.'/../../../../twbs/bootstrap/_config.yaml');
+		$config = file_get_contents(__DIR__.'/../../../../twbs/bootstrap/_config.yml');
 		if ($config !== FALSE) {
 			$matches = array();
-			if (preg_match_all('/current_version:\s*([\\d\\.]+)/', $changes, $matches)) {
+			if (preg_match_all('/current_version:\s*([\\d\\.]+)/', $config, $matches)) {
 				return $matches[1][0];
 			}
 		}
@@ -101,7 +101,7 @@ class Bootstrap {
      *            - whether the minified CSS shall be selected (optional, default is TRUE)
      * @return string the HTML javascript tag
      */
-    public static function getJsUri($bundle = TRUE, $minified = TRUE) {
+    public static function getJsLink($bundle = TRUE, $minified = TRUE) {
         $uri = self::getJsUri($bundle, $minified);
         return '<script type="text/javascript src="'.$uri.'"></script>';
     }

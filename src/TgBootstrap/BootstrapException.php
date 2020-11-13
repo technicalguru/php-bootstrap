@@ -1,12 +1,12 @@
 <?php
 
-namespace TgFontAwesome;
+namespace TgBootstrap;
 
 /**
- * Exception for any FontAwesome related errors.
+ * Exception for any Bootstrap related errors.
  * <p>The $info field can contain additional information about the error.</p>
  */
-class FontAwesomeException extends Exception {
+class BootstrapException extends \Exception {
 
 	public $info;
 
