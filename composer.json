@@ -1,0 +1,30 @@
+{
+    "name": "technicalguru/bootstrap",
+    "description": "Provide Bootstrap to PHP apps",
+    "type": "library",
+    "keywords" : [
+        "bootstrap",
+        "css",
+        "responsive",
+        "framework"
+    ],
+    "license" : "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "technicalguru",
+            "email": "github@ralph-schuster.eu"
+        }
+    ],
+    "require" : {
+        "php" : ">=7.0.0",
+	"twbs/bootstrap" : "*"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "TgBootstrap\\" : "src/TgBootstrap/"
+        }
+    },
+    "require-dev" : {
+        "phpunit/phpunit" : "^9"
+    }
+}
